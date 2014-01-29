@@ -1,5 +1,3 @@
-# HootSuite Lightning Talk - Signal Analysis for Security
+# HootSuite Lightning Talk - Leap.js
 
 Clone this repo and open index.html in your favorite browser order to view.
-
-Code for calculating the fournier transform signal is presentation.py.
