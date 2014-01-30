@@ -4,10 +4,9 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Po's Lightning Talk</title>
+		<title>Leap.js - Lightning Talk</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -62,6 +61,62 @@
           <img src="./img/airspace.png">
         </section>
 
+	<section>
+		<h2>Leap Javascript API - Gesture Class</h2>
+		<h4>Properties:</h4>
+		<p>
+			<ul>
+				<li>id</li>
+				<li>duration</li>
+				<li>pointableIds</li>
+				<li>handIds</li>
+				<li>state</li>
+				<li>type</li>
+			</ul>
+		</p>
+		<p class="fragment visible" style="color: green;">-&gt; type</p>
+		
+	</section>
+	
+	<section>
+		<h2>Gesture Subclasses</h2>
+		<p>
+			<ul>
+				<li>CircleGesture - A circular movement by a finger.</li>
+				<li>SwipeGesture - A straight line movement by the hand with fingers extended.</li>
+				<li>ScreenTapGesture - A forward tapping movement by a finger.</li>
+				<li>KeyTapGesture - A downward tapping movement by a finger.</li>
+			</ul>
+		</p>
+		
+	</section>
+	
+	<section>
+		<h2>Gesture Class - Code Example</h2>
+		<pre><code data-trim>
+	<script src="//js.leapmotion.com/0.3.0-beta2/leap.min.js"></script>
+	// Fires approximately approximately sixty times a second
+	// Returns a FRAME instance
+	Leap.loop({enableGestures: true},function(FRAME) {
+
+		// Get the number of hands (FRAME.hands is an array)
+		var hands = FRAME.hands.length;
+		
+		// Get a gesture (FRAME.gestures is an array)
+		var gesture = FRAME.gestures[ {gesture:id} ];
+		
+		// Check if a gesture was a key tap
+		if( gesture.type == 'keyTap' ){
+		
+		// do some cool stuff here
+		
+		}
+	});
+	
+		
+		</code></pre>
+		
+	</section>
 
 
         <section>
@@ -69,16 +124,13 @@
         </section>
 
         <section>
-          <img src="./img/demo_po_setup.jpg"/>
-        </section>
+		<h3>http://gitlab.hootsuitemedia.com/po.liu/<br>lightning-talks</h3>
+		<h3>http://leap.cloudnode.co</h3>
+	</section>
 
         <section>
-          <h2>http://gitlab.hootsuitemedia.com/<br>po.liu/lightning-talks</h2>
-				</section>
-
-        <section>
-          <h1>The End</h1>
-				</section>
+		<h1>The End</h1>
+	</section>
 
 
 
