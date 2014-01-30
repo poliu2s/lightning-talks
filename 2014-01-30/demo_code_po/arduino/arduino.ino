@@ -40,7 +40,7 @@ void loop()
 
 
 void turnCW() {
-  if (pos < 180) {
+  if (pos < 360) {
     delay(5);
     pos += 1;
     myservo.write(pos);
