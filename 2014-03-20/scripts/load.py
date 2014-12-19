@@ -26,7 +26,11 @@ for i in range(0, len(d)):
 
         request = "curl -XPOST \'http://localhost:9200/cdd/disasters/\' -d \'" \
                   + str(convert(d[i])).replace('\'', '\"') + "\'"
-        call(request, shell=True)
+
+        print request
+        exit(0)
+        # call(request, shell=True)
     except Exception:
-        print "\n\nfailed on : " + str(d[i])
+
+        print "\n\nfailed on : " + str(i)
 
